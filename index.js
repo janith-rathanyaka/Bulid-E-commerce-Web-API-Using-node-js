@@ -9,7 +9,7 @@ const cors = require('cors')
 
 const api = process.env.API_URL;
 const productRouter = require('./routers/products')
-
+const categoryRouter = require('./routers/categories')
 
 app.use(cors());
 app.options('*',cors())
@@ -22,7 +22,7 @@ app.use(morgan('tiny'))
 
 //Router
 app.use(`${api}/products`, productRouter)
-
+app.use(`${api}/categories`,categoryRouter)
 
 
 mongoose.connect(process.env.CONNECTION_STRING,{

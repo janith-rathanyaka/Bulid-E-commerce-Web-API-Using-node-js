@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const productSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
 
 })
 
